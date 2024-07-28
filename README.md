@@ -1,10 +1,15 @@
-Homework #3
+Language HI
 ===========
 
-[Classroom](https://classroom.github.com/a/Ur7rdwaC)
-
-In this homework we will gradually develop a small programming language
-called Hi.
+Implementation of a functional language with:
+  - Arithmetic expressions
+  - Boolean types and comparisons
+  - Strings and slices
+  - Lists and folds
+  - Dictionaries
+  - Byte representation and serialization
+  - File I/O
+  - Date and time
 
 Project Structure
 -----------------
