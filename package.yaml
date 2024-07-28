@@ -1,0 +1,81 @@
+name:                hw3
+version:             0.1.0.0
+github:              "DimaUtyuz/hw3"
+license:             BSD3
+author:              "Utyuzhnikov Dmitrii"
+maintainer:          "dima-utyuzhnikov2013@yandex.ru"
+copyright:           "2023 Utyuzhnikov Dmitrii"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/DimaUtyuz/hw3#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+  dependencies:
+    - megaparsec
+    - prettyprinter
+    - prettyprinter-ansi-terminal
+    - parser-combinators
+    - transformers
+    - bytestring
+    - containers
+    - text
+    - time
+    - scientific
+    - zlib
+    - serialise
+    - directory
+    - random
+
+executables:
+  hw3-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskeline
+    - hw3
+    - containers
+    - transformers
+    - prettyprinter
+    - prettyprinter-ansi-terminal
+    - megaparsec
+    - text
+
+tests:
+  hw3-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hw3
